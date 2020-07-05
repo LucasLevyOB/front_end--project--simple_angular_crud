@@ -1,0 +1,17 @@
+#header > .title-group > a {
+    text-decoration: none;
+    color: #101010;
+    font-weight: 300;
+    font-size: 19px;
+}
+#header > .title-group {
+    font-size: 19px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #101010;
+}
+#header {
+    height: auto;
+    flex-direction: row;
+    display: flex;
+}

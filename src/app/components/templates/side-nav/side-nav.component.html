@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container mat-elevation-z20">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -23,7 +23,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar id="div-header" color="primary">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -32,8 +32,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>simpleAngularCrud</span>
+      <app-header></app-header>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <ng-content></ng-content>
+    <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

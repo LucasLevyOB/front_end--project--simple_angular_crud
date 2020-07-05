@@ -1,3 +1,7 @@
+#div-header {
+  height: auto;
+}
+
 #div-logo > img {
   max-width: 128px;
   height: auto;
