@@ -1,3 +1,18 @@
+#div-logo > img {
+  max-width: 128px;
+  height: auto;
+  width: 100%;
+}
+
+#div-logo {
+  height: auto;
+  padding: 5px 2px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
 .sidenav-container {
   height: 100%;
 }
