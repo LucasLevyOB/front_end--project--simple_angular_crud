@@ -16,6 +16,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { ProductCrudComponent } from './components/pages/product-crud/product-crud.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './components/pages/home/home.component';
     SideNavComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ProductCrudComponent
   ],
   imports: [
     BrowserModule,

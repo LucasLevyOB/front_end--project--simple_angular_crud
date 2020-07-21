@@ -1,11 +1,25 @@
 <div class="ng-content-component">
-    <mat-card class="mat-elevation-z3">
-        <mat-card-title class="title">
-            Bem vindo!
-        </mat-card-title>
-        <mat-card-subtitle class="subtitle">
-            Sistema para exemplificar a construção de um cadastro em Angular
-        </mat-card-subtitle>
-        <!-- <li *appFor="let n em [1, 2, 3]">{{ n }}</li> -->
-    </mat-card>
+    <ng-template [ngIf]="userLogged" [ngIfElse]="loggedOut">
+        <mat-card class="mat-elevation-z3">
+            <mat-card-title class="title">
+                Bem vindo!!!
+            </mat-card-title>
+            <mat-card-content class="subtitle">
+                Cadastre seus produtos.
+            </mat-card-content>
+            <!-- <li *appFor="let n em [1, 2, 3]">{{ n }}</li> -->
+        </mat-card>
+      </ng-template>
+      
+      <ng-template #loggedOut>
+        <mat-card class="mat-elevation-z3">
+            <mat-card-title class="title">
+                Você não está logado, por favor faça o login!!!
+            </mat-card-title>
+            <mat-card-content class="subtitle">
+                Você precisa estar logado para cadastrar os produtos.
+            </mat-card-content>
+        </mat-card>
+      </ng-template>
+    
 </div>
