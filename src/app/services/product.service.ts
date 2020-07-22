@@ -40,4 +40,20 @@ export class ProductService {
       catchError(error => this.errorHandler(error))
     );
   }
+
+  readById(productId: number): Observable<Product> {
+    const url: string = `${this.baseUrl}/${productId}`;
+    return this.http.get(url).pipe(
+      map(obj => obj),
+      catchError(error => this.errorHandler(error))
+    );
+  }
+
+  update(product: Product): Observable<Product> {
+    const url = `${this.baseUrl}/${product.pro_id}`;
+    return this.http.put<Product>(url, product).pipe(
+      map(obj => obj),
+      catchError(error => this.errorHandler(error))
+    );
+  }
 }

@@ -1,3 +1,4 @@
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductCrudComponent } from './components/pages/product-crud/product-crud.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'produtos/cadastrar',
     component: ProductCreateComponent
+  },
+  {
+    path: 'produtos/editar/:productId',
+    component: ProductUpdateComponent
   }
 ];
 

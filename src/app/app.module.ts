@@ -25,6 +25,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HomeComponent,
     ProductCrudComponent,
     ProductReadComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductUpdateComponent
   ],
   imports: [
     BrowserModule,

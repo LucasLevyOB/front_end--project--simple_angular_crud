@@ -1,5 +1,5 @@
 export interface Product {
-    proId?: number;
-    proName: string;
-    proPrice: number;
+    pro_id?: number;
+    pro_name: string;
+    pro_price: number;
 }

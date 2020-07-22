@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class ProductCreateComponent implements OnInit {
 
   product: Product = {
-    proName: '',
-    proPrice: null
+    pro_name: '',
+    pro_price: null
   };
 
   constructor(
@@ -35,7 +35,7 @@ export class ProductCreateComponent implements OnInit {
   }
 
   setPrice(price: string): void{
-    this.product.proPrice = parseFloat(price.replace(',', '.'));
+    this.product.pro_price = parseFloat(price.replace(',', '.'));
     // console.log(price.replace(',', '.'));
   }
 

@@ -11,14 +11,13 @@ export class ProductReadComponent implements OnInit {
 
   products: Product[];
 
-  displayedColumns = ['pro_id', 'pro_name', 'pro_price'];
+  displayedColumns = ['pro_id', 'pro_name', 'pro_price', 'action'];
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.productService.read().subscribe(products => {
       this.products = products;
-      console.log(this.products);
     });
   }
 
