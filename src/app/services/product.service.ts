@@ -23,12 +23,19 @@ export class ProductService {
   }
 
   errorHandler(error: any): Observable<any> {
-    this.showMessage(`${error.error.response}, erro!`);
+    this.showMessage(`${error.error.response}, campos: ${error.error.fields ?? ''}`);
     return EMPTY;
   }
 
   create(product: Product): Observable<Product> {
     return this.http.post<Product>(this.baseUrl, JSON.stringify(product)).pipe(
+      map(obj => obj),
+      catchError(error => this.errorHandler(error))
+    );
+  }
+
+  read(): Observable<Product[]> {
+    return this.http.get(this.baseUrl).pipe(
       map(obj => obj),
       catchError(error => this.errorHandler(error))
     );

@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { HomeComponent } from './components/pages/home/home.component';
@@ -52,7 +53,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     MatSnackBarModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

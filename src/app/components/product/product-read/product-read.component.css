@@ -1,0 +1,15 @@
+#div-product-read{
+    padding-top: 10px;
+}
+.delete > i{
+    color: red;
+}
+.edit{
+    margin-right: 10px;
+}
+.edit > i{
+    color: blue;
+}
+table{
+    width: 100%;
+}
