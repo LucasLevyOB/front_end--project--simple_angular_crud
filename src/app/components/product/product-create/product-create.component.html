@@ -1,0 +1,30 @@
+<div id="product-create">
+    <mat-card>
+        <mat-card-title>Novo produto</mat-card-title>
+        <form>
+            <mat-form-field appearance="legacy">
+                <mat-label>Nome do produto</mat-label>
+                <input matInput placeholder="ex: caneta bic" [(ngModel)]="product.proName" name="proName">
+                <mat-icon matSuffix>create</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Preço do produto</mat-label>
+                <input matInput placeholder="ex: 2,99 R$" #price (keyup)="setPrice(price.value)" name="proPrice">
+                <mat-icon matSuffix>attach_money</mat-icon>
+            </mat-form-field>
+        </form>
+        <button mat-raised-button (click)="createProduct()" color="primary">
+            Salvar
+        </button>
+        <button mat-raised-button (click)="cancel()" color="secundary" color="warn">
+            Cancelar
+        </button>
+    </mat-card>
+</div>
+
+
+
+
+<!-- <span matPrefix>R$&nbsp;</span> -->
+<!-- <p [id]="propLegal">product-create works!</p>
+<button (click)="fazerAlgo()">Fazer algo</button> -->

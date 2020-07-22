@@ -13,10 +13,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { ProductCrudComponent } from './components/pages/product-crud/product-crud.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,9 @@ import { ProductCrudComponent } from './components/pages/product-crud/product-cr
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ProductCrudComponent
+    ProductCrudComponent,
+    ProductReadComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +47,12 @@ import { ProductCrudComponent } from './components/pages/product-crud/product-cr
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    HttpClientModule,
+    FormsModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { ProductCrudComponent } from './components/pages/product-crud/product-cr
 import { HomeComponent } from './components/pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'produtos',
     component: ProductCrudComponent
+  },
+  {
+    path: 'produtos/cadastrar',
+    component: ProductCreateComponent
   }
 ];
 

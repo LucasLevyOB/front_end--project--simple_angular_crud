@@ -1,0 +1,14 @@
+#product-create{
+    padding: 10px 0;
+}
+button{
+    margin-right: 10px;
+}
+form mat-form-field{
+    max-width: 300px;
+    width: 100%;
+}
+form{
+    flex-direction: column;
+    display: flex;
+}
