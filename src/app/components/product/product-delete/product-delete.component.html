@@ -1,0 +1,23 @@
+<div id="product-update">
+    <mat-card>
+        <mat-card-title>Excluir produto</mat-card-title>
+        <form>
+            <mat-form-field appearance="legacy">
+                <mat-label>Nome do produto</mat-label>
+                <input matInput placeholder="ex: caneta bic" [ngModel]="product.pro_name" name="pro_name" disabled>
+                <mat-icon matSuffix>create</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Preço do produto</mat-label>
+                <input matInput placeholder="ex: 2,99 R$" [ngModel]="product.pro_price" name="pro_price" disabled>
+                <mat-icon matSuffix>attach_money</mat-icon>
+            </mat-form-field>
+        </form>
+        <button mat-raised-button (click)="deleteProduct()" color="warn">
+            Excluir
+        </button>
+        <button mat-raised-button (click)="cancel()" color="secundary">
+            Cancelar
+        </button>
+    </mat-card>
+</div>

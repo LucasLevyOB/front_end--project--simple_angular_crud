@@ -56,4 +56,12 @@ export class ProductService {
       catchError(error => this.errorHandler(error))
     );
   }
+
+  delete(productId: number): Observable<Product> {
+    const url = `${this.baseUrl}/${productId}`;
+    return this.http.delete<Product>(url).pipe(
+      map(obj => obj),
+      catchError(error => this.errorHandler(error))
+    );
+  }
 }
