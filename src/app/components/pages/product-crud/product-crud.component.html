@@ -1,6 +1,18 @@
-<div id="div-product-crud">
-    <button mat-raised-button (click)="navigateToProductCreate()" color="primary">
-        Novo produto
-    </button>
+<div class="main">
+    <div id="card-create">
+        <mat-card class="mat-elevation-z3 main-card">
+            <mat-card-title class="card-title">
+                Cadastre seus produtos!
+            </mat-card-title>
+            <mat-card-content class="card-body">
+                Para cadastrar seus produtos click aqui! <br>
+            </mat-card-content>
+            <mat-card-content class="card-body center">
+                <button class="button-primary" mat-raised-button (click)="navigateToProductCreate()">
+                    Novo produto
+                </button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <app-product-read></app-product-read>
 </div>
-<app-product-read></app-product-read>

@@ -1,13 +1,10 @@
-<mat-sidenav-container class="sidenav-container mat-elevation-z20">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+<mat-sidenav-container id="sidenav-container" class="mat-elevation-z20">
+  <mat-sidenav #drawer id="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar id="div-logo">
-      <img src="../../../../assets/cadusu.png" alt="">
-    </mat-toolbar>
     <mat-divider></mat-divider>
-    <mat-nav-list>
+    <mat-nav-list id="sidenav-menu">
       <a mat-list-item routerLink="/">
         <i class="material-icons secundary">
           home
@@ -21,9 +18,17 @@
         Produtos
       </a>
     </mat-nav-list>
+    <mat-toolbar id="div-logo">
+      <div>
+        <img src="../../../../assets/cadusu.png" alt="">
+      </div>
+      <p>
+        Desenvolvido com Angular
+      </p>
+    </mat-toolbar>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar id="div-header" color="primary">
+    <mat-toolbar id="div-header">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -36,6 +41,6 @@
     </mat-toolbar>
     <!-- Add Content Here -->
     <ng-content></ng-content>
-    <app-footer></app-footer>
+    <!-- <app-footer></app-footer> -->
   </mat-sidenav-content>
 </mat-sidenav-container>

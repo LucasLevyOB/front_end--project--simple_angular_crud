@@ -1,22 +1,71 @@
-<div class="ng-content-component">
+<div class="main">
+    <div id="image-home">
+        <img src="../../../../assets/cadusu.png" alt="">
+    </div>
     <ng-template [ngIf]="userLogged" [ngIfElse]="loggedOut">
-        <mat-card class="mat-elevation-z3">
-            <mat-card-title class="title">
+        <mat-card class="mat-elevation-z3 main-card">
+            <mat-card-title class="card-title">
                 Bem vindo!!!
             </mat-card-title>
-            <mat-card-content class="subtitle">
+            <mat-card-content class="card-body">
                 Cadastre seus produtos.
             </mat-card-content>
             <!-- <li *appFor="let n em [1, 2, 3]">{{ n }}</li> -->
         </mat-card>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxFlexWrap="wrap">
+            <mat-card class="mat-elevation-z3 secondary-card" fxFlex="0 1 calc(33.3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
+                <mat-card-title class="card-title">
+                    Cadastrar Produtos?!!
+                </mat-card-title>
+                <mat-card-content class="card-body">
+                    <a routerLink="/produtos/cadastrar">
+                        Click aqui!
+                    </a>
+                    Para poder cadastrar seus produtos.
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="mat-elevation-z3 secondary-card" fxFlex="0 1 calc(33.3% - 10px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+                <mat-card-title class="card-title">
+                    Veja todos os produtos!
+                </mat-card-title>
+                <mat-card-content class="card-body">
+                    <a routerLink="/produtos">
+                        Click aqui!
+                    </a>
+                    Para ver todos os produtos.
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="mat-elevation-z3 secondary-card" fxFlex="0 1 calc(33.3% - 10px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+                <mat-card-title class="card-title">
+                    Edite seus produtos!
+                </mat-card-title>
+                <mat-card-content class="card-body">
+                    <a routerLink="/produtos">
+                        Click aqui!
+                    </a>
+                    Para escolher o produto.
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="mat-elevation-z3 secondary-card" fxFlex="0 1 calc(33.3% - 10px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+                <mat-card-title class="card-title">
+                    Quer deletar algum produto!
+                </mat-card-title>
+                <mat-card-content class="card-body">
+                    <a routerLink="/produtos">
+                        Click aqui!
+                    </a>
+                    Para listar os produtos.
+                </mat-card-content>
+            </mat-card>
+        </div>
       </ng-template>
       
       <ng-template #loggedOut>
         <mat-card class="mat-elevation-z3">
-            <mat-card-title class="title">
+            <mat-card-title class="card-title">
                 Você não está logado, por favor faça o login!!!
             </mat-card-title>
-            <mat-card-content class="subtitle">
+            <mat-card-content class="card-body">
                 Você precisa estar logado para cadastrar os produtos.
             </mat-card-content>
         </mat-card>

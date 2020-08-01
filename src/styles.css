@@ -1,8 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-1: #00BFFF;
+    /* --color-3: #00BFFF; */
+    --color-2: #252525; 
+    /* --color-1: #FF8200; */
+    --color-3: #FF8200;
+    --color-4: #ffffff; 
+    --color-5: #000000;
+    --color-6: #f1f1f1;
+    --color-7: #fa1616;
+    --color-8: #909090;
+    --font-size-1: 15px;
+    --font-size-2: 17px;
+    --font-size-3: 19px;
+    --font-size-4: 22px;
+    --font-size-5: 24px;
+    --font-weight-1: 300;
+    --font-weight-2: 400;
+    --font-weight-3: 500;
+    --font-family-1: 'Recursive', sans-serif;
+    --font-family-2: 'Roboto Slab', serif;
+    --opacity-1: .8;
+}
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; }
 
-.ng-content-component {
-    padding: 5px 2px 45px 2px;
+::selection {
+    color: var(--color-3, #FF8200);
+    background-color: var(--color-5, #000000);
+}
+
+input, input::placeholder, .label {
+    font-family: var(--font-family-1, 'Recursive', sans-serif);
+    font-weight: var(--font-weight-1, 300);
+    font-size: var(--font-size-2, 17px);
+}
+
+.button-alert {
+    background-color: var(--color-7, #fa1616);
+    color: var(--color-4, #ffffff);
+}
+
+.button-primary {
+    background-color: var(--color-1, #00BFFF);
+    color: var(--color-4, #ffffff);
+}
+
+a:hover {
+    color: var(--color-3, #FF8200);
+    opacity: var(--opacity-1, .8);
+}
+
+a {
+    font-family: var(--font-family-2, 'Roboto Slab', serif);
+    color: var(--color-1, #00BFFF);
+}
+
+.form-field, .form-buttons {
+    width: fit-content;
+    margin: auto;    
+}
+
+.card-body {
+    font-family: var(--font-family-2, 'Roboto Slab', serif);
+    font-size: var(--font-size-3, 19px);
+    font-weight: var(--font-weight-1, 300);
+}
+
+.card-title {
+    font-family: var(--font-family-1, 'Recursive', sans-serif);
+    font-size: var(--font-size-4, 22px);
+    font-weight: var(--font-weight-3, 500);
+}
+
+.secondary-card {
+    margin: 5px;
+}
+
+.main-card {
+    margin: 5px;
+}
+
+.main {
+    padding: 40px 5px 5px 5px;
+}
+
+@media(max-width: 400px) {
+    .main {
+        padding: 40px 0 5px 0;
+    }
+
+    .secondary-card {
+        margin: 5px 0;
+    }
+    
+    .main-card {
+        margin: 5px 0;
+    }
 }

@@ -1,14 +1,16 @@
 #header > .title-group > a {
+    text-transform: uppercase;
     text-decoration: none;
-    color: #101010;
-    font-weight: 300;
-    font-size: 19px;
+    color: var(--color-4, #ffffff);
+    font-weight: var(--font-weight-2, 400);
+    font-size: var(--font-size-2, 17px);
 }
 #header > .title-group {
-    font-size: 19px;
-    font-weight: 300;
+    font-family: var(--font-family-1, 'Recursive', sans-serif);
+    color: var(--color-5, #000000);
+    font-weight: var(--font-weight-1, 300);
+    font-size: var(--font-size-2, 17px);
     text-decoration: none;
-    color: #101010;
 }
 #header {
     height: auto;

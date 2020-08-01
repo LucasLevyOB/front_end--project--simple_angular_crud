@@ -1,14 +1,31 @@
-#div-product-read{
-    padding-top: 10px;
+.mat-header-cell {
+    color: inherit;
 }
+
+tr.tr-table:hover {
+    background-color: var(--color-6, #f1f1f1);
+}
+
+td {
+    font-family: var(--font-family-1, 'Recursive', sans-serif);
+    font-size: var(--font-size-2, 17px);
+    font-weight: var(--font-weight-2, 400);
+}
+
+th {
+    font-family: var(--font-family-1, 'Recursive', sans-serif);
+    font-size: var(--font-size-3, 19px);
+    font-weight: var(--font-weight-3, 500);
+}
+
 .delete > i{
-    color: red;
+    color: var(--color-7, #fa1616);
 }
 .edit{
     margin-right: 10px;
 }
 .edit > i{
-    color: blue;
+    color: var(--color-1, #00BFFF);
 }
 table{
     width: 100%;
