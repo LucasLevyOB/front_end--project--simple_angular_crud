@@ -1,13 +1,18 @@
 <div id="header">
-    <span class="title-group">
-        <a routerLink="/">
-            Home
-        </a>
-        /
-        <a routerLink="/">
-            Produtos
-        </a>
-    </span>
+    <div id="breadcrumb">
+        <span class="title-group">
+            <a routerLink="/">
+                Home
+            </a>
+            /
+            <a routerLink="/">
+                Produtos
+            </a>
+        </span>
+    </div>
+    <div id="toggleTheme">
+        <mat-slide-toggle (change)="toggleTheme()" [(ngModel)]="theme" color="primary"></mat-slide-toggle>
+    </div>
     <!-- <span class="title-group">
         <a routerLink="{{ routeURL }}">
             <i class="material-icons">

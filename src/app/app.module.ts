@@ -17,6 +17,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { HomeComponent } from './components/pages/home/home.component';
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { ConfigurationsComponent } from './components/pages/configurations/configurations.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
     ProductReadComponent,
     ProductCreateComponent,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    ConfigurationsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +58,7 @@ import { ProductDeleteComponent } from './components/product/product-delete/prod
     MatListModule,
     MatCardModule,
     MatDividerModule,
+    MatSlideToggleModule,
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,

@@ -1,3 +1,7 @@
+/* #app-header {
+  width: 100%;
+} */
+
 .material-icons {
   align-self: center;
 }
@@ -65,7 +69,8 @@
 #sidenav {
   background-color: var(--color-2, #252525);
   height: 100%;
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
 }
 
 #sidenav-container {

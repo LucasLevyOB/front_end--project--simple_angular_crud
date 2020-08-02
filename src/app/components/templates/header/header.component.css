@@ -1,11 +1,17 @@
-#header > .title-group > a {
+#header > #toggleTheme {
+    margin-left: 10px;
+    align-items: center;
+    display: flex;
+}
+
+#header > #breadcrumb > .title-group > a {
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-4, #ffffff);
     font-weight: var(--font-weight-2, 400);
     font-size: var(--font-size-2, 17px);
 }
-#header > .title-group {
+#header > #breadcrumb > .title-group {
     font-family: var(--font-family-1, 'Recursive', sans-serif);
     color: var(--color-5, #000000);
     font-weight: var(--font-weight-1, 300);
@@ -13,7 +19,10 @@
     text-decoration: none;
 }
 #header {
+    /* width: 100%; */
     height: auto;
+    word-wrap: break-word;
+    flex-wrap: wrap;
     flex-direction: row;
     display: flex;
 }
