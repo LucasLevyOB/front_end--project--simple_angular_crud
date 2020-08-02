@@ -9,7 +9,7 @@
             </mat-form-field>
             <mat-form-field appearance="legacy" class="form-field">
                 <mat-label class="label">Preço do produto</mat-label>
-                <input matInput placeholder="ex: 2,99 R$" [ngModel]="product.pro_price" name="pro_price" disabled>
+                <input matInput placeholder="ex: 2,99 R$" [ngModel]="product.pro_price | currency: 'BRL'" name="pro_price" disabled>
                 <mat-icon matSuffix>attach_money</mat-icon>
             </mat-form-field>
         </form>

@@ -25,7 +25,6 @@ export class ProductUpdateComponent implements OnInit {
     const productId = this.route.snapshot.paramMap.get('productId');
     this.productService.readById(parseInt(productId)).subscribe(product => {
       this.product = product;
-      console.log(this.product)
     });
   }
 
@@ -42,7 +41,7 @@ export class ProductUpdateComponent implements OnInit {
 
   setPrice(price: string): void{
     this.product.pro_price = parseFloat(price.replace(',', '.'));
-    // console.log(price.replace(',', '.'));
+    console.log(this.product.pro_price);
   }
 
 }
