@@ -1,15 +1,15 @@
 <div class="main">
     <mat-card>
         <mat-card-title class="card-title">Cadastro de produto</mat-card-title>
-        <form>
+        <form #createForm="ngForm">
             <mat-form-field appearance="legacy" class="form-field">
                 <mat-label class="label">Nome do produto</mat-label>
-                <input matInput placeholder="ex: caneta bic" [(ngModel)]="product.pro_name" name="pro_name">
+                <input matInput class="" placeholder="ex: caneta bic" [(ngModel)]="product.pro_name" name="pro_name" #proName minlength="3" maxlength="200" required>
                 <mat-icon matSuffix>create</mat-icon>
             </mat-form-field>
             <mat-form-field appearance="legacy" class="form-field">
                 <mat-label class="label">Preço do produto</mat-label>
-                <input matInput placeholder="ex: 2,99 R$" #price (keyup)="setPrice(price.value)" name="pro_price">
+                <input matInput class="" placeholder="ex: 2,99 R$" #proPrice (keyup)="setPrice(proPrice.value)" name="pro_price" minlength="1" maxlength="10" required>
                 <mat-icon matSuffix>attach_money</mat-icon>
             </mat-form-field>
         </form>

@@ -23,7 +23,7 @@ export class ProductService {
   }
 
   errorHandler(error: any): Observable<any> {
-    this.showMessage(`${error.error.response}, campos: ${error.error.fields ?? ''}`);
+    this.showMessage(`${error.error.response}, error: ${error.error.error ?? ''}`);
     return EMPTY;
   }
 
